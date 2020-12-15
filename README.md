@@ -1,1 +1,1 @@
-"# QA Ninja Week - Edi�ao1" 
+# QA Ninja Week - 1ª Edição
