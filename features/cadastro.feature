@@ -9,8 +9,9 @@ Para que eu possa ouvir minhas músicas favoritas
 Cenário: Cadastro
     Dado que acesso a página de cadastro
     Quando submeto o meu cadastro com:
-        |email|cassiodamacena@hotmail.com|
+        |email|cassio.damacena@hotmail.com|
         |senha|123456|
+        |senha_confirma|123456|
     Então devo ser redirecionado para a área logada
 
 Cenário: Email não informado
