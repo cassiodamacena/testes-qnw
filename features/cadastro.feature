@@ -14,11 +14,13 @@ Cenário: Cadastro
         |senha_confirma|123456|
     Então devo ser redirecionado para a área logada
 
+
 Cenário: Email não informado
     Dado que acesso a página de cadastro
     Quando submeto o meu cadastro sem o email
     Então devo ver Oops! Informe seu email
 
+@temp
 Cenário: Senha não informada
     Dado que acesso a página de cadastro
     Quando submeto o meu cadastro sem a senha
