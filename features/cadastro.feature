@@ -13,34 +13,17 @@ Cenário: Cadastro
         |senha_confirma |123456                     |
     Então devo ser redirecionado para a área logada
 
-Cenário: Email não informado
+Esquema do Cenário: Tentativas de cadastro
     Dado que acesso a página de cadastro
     Quando submeto o meu cadastro com:
-        |email          |                 |
-        |senha          |123456           |
-        |senha_confirma |123456           |
-    Então devo ver a mensagem: "Oops! Informe seu email."
+        |email          |<email>          |
+        |senha          |<senha>          |
+        |senha_confirma |<senha_confirma> |
+    Então devo ver a mensagem: "<mensagem_saida>"
 
-Cenário: Senha não informada
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro com:
-        |email          |cassio.damacena@hotmail.com|
-        |senha          |                           |
-        |senha_confirma |                           |
-    Então devo ver a mensagem: "Oops! Informe sua senha."
-
-Cenário: Senha divergente
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro com:
-        |email          |cassio.damacena@hotmail.com|
-        |senha          |123456                     |
-        |senha_confirma |654321                     |
-    Então devo ver a mensagem: "Oops! Senhas não são iguais."
-
-Cenário: Nenhum campo preenchido
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro com:
-        |email          |   |
-        |senha          |   |
-        |senha_confirma |   |
-    Então devo ver a mensagem: "Oops! Informe seu email e sua senha."
+    Exemplos:
+    | email                     | senha  | senha_confirma | mensagem_saida                      |
+    |                           | 123456 | 123456         | Oops! Informe seu email.            |
+    |cassio.damacena@hotmail.com|        |                | Oops! Informe sua senha.            |
+    |cassio.damacena@hotmail.com| 123456 | 654321         | Oops! Senhas não são iguais.        |
+    |                           |        |                | Oops! Informe seu email e sua senha.|
