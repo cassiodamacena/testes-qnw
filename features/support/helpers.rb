@@ -1,7 +1,7 @@
 require "httparty"
 
 module Helpers
-  def delorean
-    HTTParty.get("http://parodify.qaninja.com.br/helpers?email=cassio.damacena@hotmail.com")
+  def delorean(email)
+    HTTParty.get("http://parodify.qaninja.com.br/helpers?email=#{email}")
   end
 end
